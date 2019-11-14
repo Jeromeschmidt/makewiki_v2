@@ -1,9 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from django.contrib.auth.forms import UserCreationForm
-from django.urls import reverse_lazy
-from django.views.generic import CreateView
+
 
 from wiki.models import Page
 
@@ -29,8 +27,3 @@ class PageDetailView(DetailView):
         return render(request, 'page.html', {
           'page': page
         })
-
-class SignUpView(CreateView):
-    form_class = UserCreationForm
-    success_url = reverse_lazy('login')
-    template_name = 'signup.html'
