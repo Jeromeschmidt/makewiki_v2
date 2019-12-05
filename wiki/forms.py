@@ -1,7 +1,7 @@
-from django import forms
+from django.forms import ModelForm
 from wiki.models import Page
 
 
-class PageForm(forms.ModelForm):
+class PageForm(ModelForm):
     """ Render and process a form based on the Page model. """
     model = Page

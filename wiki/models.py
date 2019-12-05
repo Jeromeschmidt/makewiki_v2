@@ -4,6 +4,9 @@ from django.urls import reverse
 from django.utils.text import slugify
 from django.utils import timezone
 from django.contrib.auth.models import User
+from django.forms import ModelForm
+from django.forms import modelform_factory
+
 
 
 class Page(models.Model):
@@ -36,3 +39,8 @@ class Page(models.Model):
 
         # Call save on the superclass.
         return super(Page, self).save(*args, **kwargs)
+
+class NewPage(ModelForm):
+    class Meta:
+        model = Page
+        fields = ['title', 'content']

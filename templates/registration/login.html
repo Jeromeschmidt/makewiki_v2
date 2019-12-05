@@ -3,6 +3,9 @@
 {% block content %}
     <h3>Log In <small class="text-muted">to create your own wiki pages!</small></h3>
     <hr>
+    {% load static %}
+    <img src="{% static 'test.jpeg' %}" alt="My image">
+
     <div class="row">
         <div class="col">
             {% if form.errors %}
