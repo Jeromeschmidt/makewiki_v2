@@ -16,7 +16,7 @@ class PageListView(ListView):
 
     def get(self, request):
         """ GET a list of Pages. """
-        pages = self.get_queryset().all().order_by('-date')
+        pages = self.get_queryset().all().order_by('-created')
         return render(request, 'list.html', {
           'pages': pages
         })
