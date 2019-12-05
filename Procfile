@@ -1,1 +1,1 @@
-web: gunicorn makewiki-js.wsgi —-log-file -
+web: gunicorn makewiki_v2.wsgi —-log-file -
