@@ -1,1 +1,1 @@
-web: gunicorn projectname.wsgi —-log-file -
+web: gunicorn makewiki-js.wsgi —-log-file -
