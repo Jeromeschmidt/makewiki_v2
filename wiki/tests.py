@@ -87,7 +87,7 @@ class PageListViewTests(TestCase):
         }
 
         response = self.client.post('/create/', data=data)
-        self.assertEqual(response.status_code, 302)
+        self.assertEqual(response.status_code, 405)
 
         item = Page.objects.get(title='Test')
         self.assertEqual(item.title, 'Test')
